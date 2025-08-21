@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lizhao.validator.mapper.AlarmTypeMapper">
+    <select id="selectByDevice" resultType="org.lizhao.validator.entity.AlarmType">
+        -- 删除 设备 信息类型
+        SELECT dsit.* FROM DEVICE_SCADA_INFO_TYPE dsit
+            LEFT JOIN DEVICE d ON d.ID = dsit.DEVICE_ID
+        WHERE d.ID = #{id};
+    </select>
+
+
+    <select id="selectListAndInfoRule" resultType="org.lizhao.validator.model.AlarmTypeRuleModel">
+        select
+            dsit.*,
+            dsir.ID as rule_id,
+            dsir.NAME as rule_name,
+            dsir.RULE as rule_desc,
+            dsir.PATTERN_ID as rule_pattern_id,
+            dsir.INCLUDE_DEVICE_NAME as rule_include_device_name,
+            dsir.FULL_TEXT_MATCH as rule_full_text_match
+        from DEVICE_SCADA_INFO_TYPE dsit
+            left join DEVICE_SCADA_INFO_RULE dsir on dsit.ID = dsir.DEVICE_SCADA_INFO_TYPE_ID
+        where dsit.DEVICE_ID in
+        <foreach collection="ids" open="(" close=")" item="id" separator=",">
+               #{id}
+        </foreach>
+    </select>
+
+    <select id="selectListAndInfoRuleWhenDeviceEmpty" resultType="org.lizhao.validator.model.AlarmTypeRuleModel">
+        select
+            dsit.*,
+            dsir.ID as rule_id,
+            dsir.NAME as rule_name,
+            dsir.RULE as rule_desc,
+            dsir.PATTERN_ID as rule_pattern_id,
+            dsir.INCLUDE_DEVICE_NAME as rule_include_device_name,
+            dsir.FULL_TEXT_MATCH as rule_full_text_match
+        from DEVICE_SCADA_INFO_TYPE dsit
+        left join DEVICE_SCADA_INFO_RULE dsir on dsit.ID = dsir.DEVICE_SCADA_INFO_TYPE_ID
+        where dsit.DEVICE_ID IS NULL OR dsit.FULL_TEXT_MATCH = 1 OR dsir.FULL_TEXT_MATCH = 1
+    </select>
+</mapper>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="800" prefWidth="1400.0" stylesheets="@../css/main.css"
+      xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.lizhao.validator.view.controller.MainController">
+
+   <Pane layoutX="392.0" layoutY="62.0" prefHeight="31.0" prefWidth="677.0">
+      <Text fx:id="fileName" layoutX="76.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 16px" text="...被选择文件名" />
+      <Button fx:id="chooseFileButton" layoutX="233.0" mnemonicParsing="false" onAction="#onOpenFileChooser" prefHeight="31.0" prefWidth="146.0" styleClass="btn, btn-info" text="选择文件" />
+      <Button fx:id="analysisButton" alignment="CENTER" layoutX="520.0" layoutY="-2.0" mnemonicParsing="false" onAction="#analysis" prefHeight="31.0" prefWidth="73.0" text="解析">
+         <!--多个style class配置-->
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-success" />
+            <String fx:value="analysis-button" />
+         </styleClass>
+      </Button>
+      <Button fx:id="downloadButton" onAction="#download" layoutX="599.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="64.0" text="下载" />
+   </Pane>
+
+   <ProgressBar fx:id="progressBar" layoutX="500.0" layoutY="440.0" prefWidth="400.0" progress="0.0" visible="false" />
+   <TableView fx:id="dataTable" layoutY="102.0" prefHeight="694.0" prefWidth="1400.0">
+      <columns>
+         <TableColumn fx:id="pointCode" prefWidth="75.0" text="行数" />
+         <TableColumn fx:id="alarmContent" prefWidth="560.0" text="告警信息" />
+         <TableColumn fx:id="needReport" prefWidth="90.0" text="是否上送" />
+         <TableColumn fx:id="needMainMerge" prefWidth="120.0" text="是否主站合并" />
+         <TableColumn fx:id="message" prefWidth="540.0" text="检测结果" />
+      </columns>
+   </TableView>
+</Pane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.lizhao.validator.mapper.AlarmRegexMapper">
+
+    <select id="selectUnderDeviceInfoRule" resultType="org.lizhao.validator.entity.AlarmRegex">
+        -- 查询 设备 规范信息下的正则
+        SELECT dsr.* FROM DEVICE_SCADA_REGEX dsr
+              LEFT JOIN DEVICE_SCADA_INFO_RULE dsir on INSTR(dsir.PATTERN_ID, dsr.ID)
+              LEFT JOIN DEVICE_SCADA_INFO_TYPE dsit ON dsit.ID = dsir.DEVICE_SCADA_INFO_TYPE_ID
+              LEFT JOIN DEVICE d ON d.ID = dsit.DEVICE_ID
+        WHERE d.ID = #{id};
+    </select>
+    <select id="selectUnderDeviceInfoType" resultType="org.lizhao.validator.entity.AlarmRegex">
+        -- 查询 设备 信息类型下的正则
+        SELECT dsr.* FROM DEVICE_SCADA_REGEX dsr
+            LEFT JOIN DEVICE_SCADA_INFO_TYPE dsit ON INSTR(dsit.PATTERN_ID, dsr.ID)
+            LEFT JOIN DEVICE d ON d.ID = dsit.DEVICE_ID
+        WHERE d.ID = #{id};
+    </select>
+    <select id="selectUnderDevice" resultType="org.lizhao.validator.entity.AlarmRegex">
+        -- 删除 设备对应的正则
+        SELECT dsr.* FROM DEVICE_SCADA_REGEX dsr
+            LEFT JOIN DEVICE d ON INSTR(d.PATTERN_ID, dsr.ID)
+        WHERE d.ID = #{id};
+    </select>
+</mapper>

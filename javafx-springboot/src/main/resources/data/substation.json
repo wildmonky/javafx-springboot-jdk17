@@ -1,0 +1,946 @@
+[
+    {
+        "name": "东莞站",
+        "voltage": "500kV"
+    },
+    {
+        "name": "莞城站",
+        "voltage": "500kV"
+    },
+    {
+        "name": "横沥站",
+        "voltage": "500kV"
+    },
+    {
+        "name": "水乡站",
+        "voltage": "500kV"
+    },
+    {
+        "name": "黎贝站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "裕元站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "元江站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "葵湖站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "莆心站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "古坑站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "景湖站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "万江站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "彭洞站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "陈屋站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "立新站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "进埔站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "七星站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "北栅站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "步田站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "信垅站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "下沙站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "和美站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "寒溪站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "板桥站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "尖岭站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "跃立站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "麒麟站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "田心站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "黄江站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "鸡啼岗站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "白石岗站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "白玉站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "铁松站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "银山站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "狮岭站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "高步站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "横窖站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "海唇站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "桑园站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "沙腰站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "怀德站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "主山站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "金洲站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "路东站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "樟村站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "龙眼站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "满丰站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "南栅站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "沙田站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "八达站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "白马站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "宏远站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "牛山站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "同沙站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "凌屋站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "西平站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "园岭站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "银丰站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "周溪站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "茶园站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "黄洲站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "南社站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "企石站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "东坑站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "城西站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "冬湖站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "独洲站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "隔坑站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "角社站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "上江站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "石排站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "中坑站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "大窝站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "石厦站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "黄洞站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "巷尾站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "竹岭站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "草围站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "河西站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "莲湖站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "三中站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "潢涌站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "锦厦站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "莲塘站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "三涌站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "厦岗站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "石美站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "厚街站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "新民站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "河桥站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "寮厦站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "港区站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "宝石站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "塘头站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "培厚站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "沙溪站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "湖柏站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "金洋站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "寮步站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "塘厦站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "良平站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "新厅站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "樟木头站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "畔山站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "长江站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "大龙站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "果合岭站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "合浦站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "岭厦站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "桥头站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "峡口站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "西湖站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "三屯站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "沿河站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "长安站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "麻涌站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "胜华站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "大岭山站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "鹿窝站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "中子源站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "道窖站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "纵江站",
+        "voltage": "500kV"
+    },
+    {
+        "name": "石碣站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "卢溪站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "卢边站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "洋坑塘站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "虎门站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "大朗站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "角布站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "金龙站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "将军站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "富马站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "信义玻璃厂",
+        "voltage": "太阳能"
+    },
+    {
+        "name": "玉泉站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "上屯站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "土桥站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "双岗站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "泥洲站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "居岐站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "社贝站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "天堂围站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "沛然站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "龙盘站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "道岭站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "桥梓站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "上角站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "西大坦站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "太和站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "东宝站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "掌洲站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "司马站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "泉塘站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "巨正源站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "朋安站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "新马莲站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "水边站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "稔子园站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "雅园站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "110kV乌沙站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "110kV新村站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "中心站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "龙洲站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "茶寮站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "上源站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "大井头站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "溪头站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "伯治站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "凤凰站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "崇焕站",
+        "voltage": "500kV"
+    },
+    {
+        "name": "羽山站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "花园站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "漳澎站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "冠和站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "田寮站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "向东站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "北区站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "新城站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "长龙站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "110kV朱平沙站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "汀山站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "莫屋站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "安富站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "枫树垅站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "正中站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "椅洋站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "德岭站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "环保城站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "锦绣站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "赵林站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "东园站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "盈福站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "黎村站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "金菊站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "沙步站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "盛丰站",
+        "voltage": "500kV"
+    },
+    {
+        "name": "智造站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "河畔站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "松木山站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "水平站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "凤岗站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "银朗站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "华南站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "洪梅站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "禾丰站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "木井站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "雁田站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "望牛墩站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "涌头站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "南阁站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "大坪站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "尖岗站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "林村站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "泰安站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "连马站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "常平站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "杨屋站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "谢岗站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "龙湖站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "清溪站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "鱼沙站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "中堂站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "石鼓站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "咸西站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "则徐站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "江城站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "石龙站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "油甘埔站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "江门站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "赤岭站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "威远站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "状元笔站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "振安站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "龙腾站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "低涌站",
+        "voltage": "220kV"
+    },
+    {
+        "name": "白沙站",
+        "voltage": "110kV"
+    },
+    {
+        "name": "桃园站",
+        "voltage": "110kV"
+    }
+]

@@ -1,0 +1,56 @@
+spring:
+#  aop:
+#    auto: true
+#    proxy-target-class: false
+
+  #  profiles:
+#    active: @active@
+  flyway:
+    enabled: true
+    user: sa
+    password: sa
+    encoding: UTF-8
+    batch: true
+    create-schemas: true
+    schemas: OMS_ZF
+    baseline-version: 1
+    baseline-on-migrate: true
+    table: flyway_schema_history
+    locations:
+      - classpath:db/migration
+
+  datasource:
+    embedded-database-connection: h2
+    hikari:
+      driver-class-name: org.h2.Driver
+      # jdbc:h2:mem:dbtest 内存模式.每次启动都要初始化
+      # jdbc:h2:file:${user.dir}/db/test 文件模式
+      jdbc-url: jdbc:h2:file:${user.dir}/db/test
+      schema: OMS_ZF
+      username: sa
+      password: sa
+      maximum-pool-size: 3
+# 需要是 web servlet应用，配置才有效，才可以通过url访问数据库
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
+#      settings:
+#        web-allow-others: true
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+
+logging:
+  charset:
+    file: UTF-8
+  file:
+#    name: app.log
+    path: ${user.dir}/log/
+  level:
+    root: debug
+    sql: debug
+
+data:
+  json:
+    substation: classpath:/data/substation.json
