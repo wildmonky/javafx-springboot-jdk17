@@ -45,11 +45,15 @@ logging:
   charset:
     file: UTF-8
   file:
-#    name: app.log
-    path: ${user.dir}/log/
+    name: ${user.dir}/log/app.log
+#    path: ${user.dir}/log/
   level:
-    root: debug
-    sql: debug
+    root: info
+#    sql: debug
+  logback:
+    rollingpolicy:
+      max-file-size: 100MB
+      max-history: 7
 
 data:
   json:

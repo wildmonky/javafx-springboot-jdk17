@@ -190,12 +190,12 @@
                         </path>
                     </annotationProcessorPaths>
                     <!-- 对于非模块化项目，禁用模块化编译 -->
-<!--                    <compilerArgs>-->
-<!--                        <arg>-Xlint:all</arg>-->
-<!--                        &lt;!&ndash; 明确指定使用类路径而不是模块路径 &ndash;&gt;-->
-<!--                        <arg>&#45;&#45;class-path</arg>-->
-<!--                        <arg>@{classpath}</arg>-->
-<!--                    </compilerArgs>-->
+                    <compilerArgs>
+                        <arg>-Xlint:all</arg>
+                        <!-- 明确指定使用类路径而不是模块路径 -->
+                        <arg>--class-path</arg>
+                        <arg>@{classpath}</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
 <!--            <plugin>-->
@@ -210,6 +210,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>target/exec/</outputDirectory>
+                    <finalName>app</finalName>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
