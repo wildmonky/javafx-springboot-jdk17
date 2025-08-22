@@ -24,13 +24,30 @@ IF not EXIST %~dp0..\..\target\exec\app.jar (
 )
 ::pause 暂停
 :: --win-console 运行时是否开启控制台
-%jpackage% --type app-image --name %app-name%  ^
-    --input ..\target\exec\ --main-jar app.jar ^
-    --icon ..\src\main\resources\lizi.png ^
+IF EXIST .\temp rmdir /Q /S .\temp
+@REM %jpackage% --type app-image --name %app-name%  ^
+@REM     --input %~dp0..\..\target\exec\ --main-jar app.jar ^
+@REM     --icon %~dp0..\..\src\main\resources\lizi.png ^
+@REM     --dest .\ --temp .\temp\rule-validator
+@REM IF EXIST .\temp rmdir /Q /S .\temp
+@REM
+@REM if exist %app-name% (
+@REM     echo build new exe success >> %log-file%
+@REM ) else (
+@REM     echo build new exe fail >> %log-file%
+@REM )
+%jpackage% --type msi ^
+    --name %app-name%  ^
+    --input %~dp0..\..\target\exec\ --main-jar app.jar ^
+    --icon %~dp0..\..\src\main\resources\lizi.png ^
     --win-console ^
-    --dest .\ --temp .\temp\rule-validator
+    --dest .\ --temp .\temp\rule-validator ^
+    --win-dir-chooser ^
+    --win-per-user-install
 
-if exist %app-name% (
+IF EXIST .\temp rmdir /Q /S .\temp
+
+if exist %app-name%-1.0.msi (
     echo build new exe success >> %log-file%
 ) else (
     echo build new exe fail >> %log-file%
