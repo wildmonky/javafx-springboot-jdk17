@@ -29,11 +29,11 @@ set /p last_line=<"%line.out%" 2>nul || set last_line=0
 set line_num=0
 if exist %bat.log.out% (
     if %last_line% == 0 (
-        for /f "usebackq delims=" %%a in ("%bat.log.out%") do (
+        for /f "usebackq delims=" %%a in (%bat.log.out%) do (
                 call :readline %%a
         )
     ) else (
-        for /f "usebackq skip=%last_line% delims=" %%a in ("%bat.log.out%") do (
+        for /f "usebackq skip=%last_line% delims=" %%a in (%bat.log.out%) do (
               call :readline %%a
         )
     )

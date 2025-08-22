@@ -43,6 +43,7 @@ IF EXIST .\temp rmdir /Q /S .\temp
     --win-console ^
     --dest .\ --temp .\temp\rule-validator ^
     --win-dir-chooser ^
+    --win-shortcut ^
     --win-per-user-install
 
 IF EXIST .\temp rmdir /Q /S .\temp
