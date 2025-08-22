@@ -39,7 +39,7 @@ IF EXIST .\temp rmdir /Q /S .\temp
 %jpackage% --type msi ^
     --name %app-name%  ^
     --input %~dp0..\..\target\exec\ --main-jar app.jar ^
-    --icon %~dp0..\..\src\main\resources\lizi.png ^
+    --icon %~dp0..\..\src\main\resources\lizi.ico ^
     --win-console ^
     --dest .\ --temp .\temp\rule-validator ^
     --win-dir-chooser ^
