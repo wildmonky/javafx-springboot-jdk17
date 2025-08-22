@@ -28,13 +28,17 @@ set /p last_line=<"%line.out%" 2>nul || set last_line=0
 :: 读取文件新内容
 set line_num=0
 if exist %bat.log.out% (
-    if %last_line% == 0 (
-        for /f "usebackq delims=" %%a in (%bat.log.out%) do (
-                call :readline %%a
-        )
-    ) else (
-        for /f "usebackq skip=%last_line% delims=" %%a in (%bat.log.out%) do (
-              call :readline %%a
+    @REM 检查文件大小，文件为空时，读取文件报错
+    for %%F in (%bat.log.out%) do set size= %%~zF
+    if !size! gtr 0 (
+        if %last_line% == 0 (
+            for /f "usebackq delims=" %%a in (%bat.log.out%) do (
+                    call :readline %%a
+            )
+        ) else (
+            for /f "usebackq skip=%last_line% delims=" %%a in (%bat.log.out%) do (
+                  call :readline %%a
+            )
         )
     )
 
