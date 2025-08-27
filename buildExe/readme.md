@@ -1,0 +1,1 @@
+```使用前，修改package.bat将jpackage路径修改成当前机器上的路径```
