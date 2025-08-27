@@ -33,7 +33,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * 事件处理不能阻塞，否则导致桌面端无响应（阻塞了），在事件处理逻辑中调用的组件也无法正常显示（必须事件处理逻辑走完才会刷新，所以才用线程池异步）
  */
-public class MainController {
+public class MainController extends Control{
 
     private final Logger logger = LoggerFactory.getLogger(MainController.class);
 
@@ -72,8 +72,12 @@ public class MainController {
 
     private List<AlarmInfo> alarmInfoList;
 
+    /**
+     * 初始化 {@link javafx.fxml.FXMLLoader#INITIALIZE_METHOD_NAME}
+     */
     @FXML
     private void initialize() {
+//        pointCode.setCellValueFactory(new PropertyValueFactory<>("pointCode"));
         pointCode.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getPointCode()));
         alarmContent.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getAlarmContent()));
         needReport.setCellValueFactory(cellData -> new SimpleStringProperty(BooleanUtils.isTrue(cellData.getValue().getNeedReport()) ? "是" : "否"));
@@ -221,7 +225,6 @@ public class MainController {
                         HashMap<AlarmService.SheetInfo, List<AlarmInfo>> map = new HashMap<>();
                         map.put(sheetInfo, data);
                         alarmService.createExcel("test", map, outputStream);
-                        outputStream.close();
                     } catch (IOException e) {
 //                        throw new RuntimeException(e);
                         logger.info(e.getMessage());
