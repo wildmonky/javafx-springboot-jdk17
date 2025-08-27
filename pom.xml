@@ -206,6 +206,15 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--需要GraalVM-->
+<!--            <plugin>-->
+<!--                <groupId>com.gluonhq</groupId>-->
+<!--                <artifactId>gluonfx-maven-plugin</artifactId>-->
+<!--                <version>1.0.27</version>-->
+<!--                <configuration>-->
+<!--                    <mainClass>org.lizhao.validator.JavaFxApplication</mainClass>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 </project>
