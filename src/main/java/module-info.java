@@ -50,34 +50,34 @@ module org.lizhao.validator {
     requires java.rmi;
     requires java.management.rmi;
 
-
     exports org.lizhao.validator;
-    exports org.lizhao.validator.event;
-    exports org.lizhao.validator.view to javafx.graphics;
-    exports org.lizhao.validator.view.controller to javafx.fxml, spring.beans;
-    opens org.lizhao.validator.view.controller to javafx.fxml, spring.core;
+    exports org.lizhao.validator.javafx.event;
+    exports org.lizhao.validator.javafx.controller to javafx.fxml, spring.beans;
+    opens org.lizhao.validator.javafx.controller to javafx.fxml, spring.core;
 
-    exports org.lizhao.validator.config;
-    opens org.lizhao.validator.config to spring.core;
+    exports org.lizhao.validator.spring.config;
+    opens org.lizhao.validator.spring.config to spring.core;
 
-    exports org.lizhao.validator.config.mybatis;
-    opens org.lizhao.validator.config.mybatis to spring.core;
+    exports org.lizhao.validator.spring.config.mybatis;
+    opens org.lizhao.validator.spring.config.mybatis to spring.core;
 
-    exports org.lizhao.validator.service;
-    opens org.lizhao.validator.service to spring.core;
+    exports org.lizhao.validator.spring.service;
+    opens org.lizhao.validator.spring.service to spring.core;
 
-    exports org.lizhao.validator.mapper;
-    opens org.lizhao.validator.mapper;
+    exports org.lizhao.validator.spring.mapper;
+    opens org.lizhao.validator.spring.mapper;
 
-    exports org.lizhao.validator.entity;
-    opens org.lizhao.validator.entity to com.baomidou.mybatis.plus.core;
+    exports org.lizhao.validator.spring.entity;
+    opens org.lizhao.validator.spring.entity to com.baomidou.mybatis.plus.core;
 
-    exports org.lizhao.validator.model;
-    opens org.lizhao.validator.model to com.google.gson;
+    exports org.lizhao.validator.spring.model;
+    opens org.lizhao.validator.spring.model to com.google.gson;
 
     // 否则flyway无法获取文件输入流
     opens db.migration.h2;
     // json文件读取
     opens data;
+    exports org.lizhao.validator.spring;
+    exports org.lizhao.validator.spring.event;
 
 }

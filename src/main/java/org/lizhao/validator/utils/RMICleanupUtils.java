@@ -44,15 +44,24 @@ public class RMICleanupUtils {
         terminateRMIThreads();
     }
 
+    /**
+     * idea插件cool request问题，开了RMI，我未在程序中关闭，导致RMI Reaper未正常关闭
+     */
     private static void terminateRMIThreads() {
-        Set<Thread> threads = Thread.getAllStackTraces().keySet();
-        for (Thread thread : threads) {
-            if (thread.getName().contains("RMI") ||
-                    thread.getName().contains("JMX") ||
-                    thread.getName().contains("Timer")) {
-                System.out.println("中断线程: " + thread.getName());
-                thread.interrupt();
-            }
-        }
+//        Set<Thread> threads = Thread.getAllStackTraces().keySet();
+//        for (Thread thread : threads) {
+//            if (thread.getName().contains("RMI") ||
+//                    thread.getName().contains("JMX") ||
+//                    thread.getName().contains("Timer")) {
+//                System.out.println("中断线程: " + thread.getName());
+//                thread.interrupt();
+//            }
+//        }
+//        for (Thread thread : threads) {
+//            if (thread.getName().contains("RMI Reaper")) {
+//                System.out.println("中断线程: " + thread.getName());
+//                thread.interrupt();
+//            }
+//        }
     }
 }
