@@ -10,13 +10,13 @@ module org.lizhao.validator {
     // opens A to B 允许包A在运行时，被B模块通过反射访问
     requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.web;
-
-    requires com.dlsc.formsfx;
-    requires net.synedra.validatorfx;
-    requires org.kordamp.ikonli.javafx;
+//    requires javafx.web;
+//
+//    requires com.dlsc.formsfx;
+//    requires net.synedra.validatorfx;
+//    requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
+//    requires eu.hansolo.tilesfx;
     requires static lombok;
 
     requires spring.boot.autoconfigure;

@@ -29,7 +29,7 @@
             <String fx:value="analysis-button" />
          </styleClass>
       </Button>
-      <Button fx:id="downloadButton" layoutX="606.0" mnemonicParsing="false" onAction="#download" prefHeight="31.0" prefWidth="64.0" text="下载" />
+      <Button fx:id="downloadButton" styleClass="btn,btn-primary" layoutX="606.0" mnemonicParsing="false" onAction="#download" prefHeight="31.0" prefWidth="64.0" text="下载" />
    </Pane>
 
    <ProgressBar fx:id="progressBar" layoutX="450.0" layoutY="440.0" prefWidth="400.0" progress="0.0" visible="false" />

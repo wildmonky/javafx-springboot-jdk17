@@ -231,8 +231,8 @@ public class MainController extends Control{
                     }
                     return null;
                 })
-                .beforeTaskStart(service -> downloadButton.setVisible(false))
-                .taskFinally(service -> downloadButton.setVisible(true))
+                .beforeTaskStart(service -> downloadButton.setDisable(true))
+                .taskFinally(service -> downloadButton.setDisable(false))
                 .build()
                 .start();
     }
