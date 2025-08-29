@@ -5,7 +5,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
+import org.springframework.scheduling.support.PeriodicTrigger;
 
+import java.time.Duration;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Supplier;
@@ -23,14 +26,17 @@ import java.util.function.Supplier;
 @Setter
 public abstract class BaseProgressBarService<T> extends BaseService<T> {
 
+    private double currentProgress = 0d;
+
     private ProgressBar progressBar;
 
     private Future<?> progressBarFlushFuture;
 
-    private final ThreadPoolTaskExecutor threadPoolTaskExecutor;
+    // 刷新进度条
+    private final ThreadPoolTaskScheduler threadPoolTaskScheduler;
 
-    public BaseProgressBarService(ThreadPoolTaskExecutor threadPoolTaskExecutor) {
-        this.threadPoolTaskExecutor = threadPoolTaskExecutor;
+    public BaseProgressBarService(ThreadPoolTaskExecutor threadPoolTaskExecutor, ThreadPoolTaskScheduler threadPoolTaskScheduler) {
+        this.threadPoolTaskScheduler = threadPoolTaskScheduler;
         super.setExecutor(threadPoolTaskExecutor);
     }
 
@@ -40,36 +46,45 @@ public abstract class BaseProgressBarService<T> extends BaseService<T> {
         }
     }
 
+    @Override
+    public void succeeded() {
+        super.succeeded();
+        destroyProgressBar();
+    }
+
+    @Override
+    protected void failed() {
+        super.failed();
+        destroyProgressBar();
+    }
+
     /**
      * 开启进度条
      *
      * @param progressSupplier 获取进度值
-     * @param interval 刷新间隔
+     * @param intervalMs 刷新间隔
      */
-    public void startProcessBar(Supplier<Double> progressSupplier, long interval) {
+    public void startProcessBar(Supplier<Double> progressSupplier, long intervalMs) {
         initProgressBar();
         AtomicReference<Double> lastProgress = new AtomicReference<>(0d);
 
-        progressBarFlushFuture = getThreadPoolTaskExecutor().submit(() -> {
-            double currentProgress = 0;
-            while (currentProgress <= 1.0) {
+        PeriodicTrigger periodicTrigger = new PeriodicTrigger(Duration.ofMillis(intervalMs));
+        periodicTrigger.setFixedRate(true);
+        progressBarFlushFuture = getThreadPoolTaskScheduler().schedule(() -> {
+            if (currentProgress <= 1.0) {
                 Double progress = progressSupplier.get();
                 if (progress == null) {
-                    break;
+                    return;
                 }
                 currentProgress = progress;
                 if (lastProgress.get() != currentProgress) {
                     flushProgressBar(currentProgress);
                     lastProgress.set(currentProgress);
                 }
-                try {
-                    Thread.sleep(interval);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+
+                log.info("BaseProgressBarService ProgressBar 每300ms刷新一次，当前进度:{}", currentProgress);
             }
-            destroyProgressBar();
-        });
+        }, periodicTrigger);
     }
 
     /**
@@ -110,7 +125,7 @@ public abstract class BaseProgressBarService<T> extends BaseService<T> {
         // 隐藏进度条
         progressBar.setVisible(false);
         progressBar.setProgress(0);
-        log.debug("销毁进度条");
+        log.info("销毁进度条");
     }
 
 }

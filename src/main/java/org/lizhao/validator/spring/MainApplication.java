@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.event.EventListener;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.rmi.RemoteException;
 
@@ -19,6 +20,7 @@ import java.rmi.RemoteException;
  */
 @Slf4j
 @MapperScan("org.lizhao.validator.spring.mapper")
+@EnableScheduling
 @SpringBootApplication
 public class MainApplication {
 
