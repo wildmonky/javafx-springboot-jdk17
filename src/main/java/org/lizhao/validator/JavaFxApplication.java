@@ -91,7 +91,6 @@ public class JavaFxApplication extends Application {
     }
 
     public static void shutdown() {
-        // FIXME Shutdown phase 1073741823 ends with 1 bean still running after timeout of 30000ms: [applicationTaskExecutor]
         SpringUtils.shutdown();
         Platform.exit();
     }
