@@ -211,7 +211,7 @@ public class MainController extends Control{
         String path = file.getPath();
 
         AlarmService alarmService = BaseService.springBean("alarmService", AlarmService.class);
-        List<AlarmInfo> data =alarmInfoList;
+        List<AlarmInfo> data = alarmInfoList;
         DownloadService downloadService = new DownloadService();
         downloadService.setProgressIndicator(progressIndicator);
         ServiceBuilder.buildWith(downloadService)
