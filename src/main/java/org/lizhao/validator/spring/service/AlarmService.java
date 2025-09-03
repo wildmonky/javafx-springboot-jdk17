@@ -937,8 +937,8 @@ public class AlarmService {
     private Map<SheetInfo, List<DeviceSCADAInputInfo>> transferExcel(InputStream inputStream) {
         try (
                 // 加载 Excel 文件
-                Workbook workbook = new XSSFWorkbook(inputStream);
-             ) {
+                Workbook workbook = new XSSFWorkbook(inputStream)
+        ) {
 
             Map<SheetInfo, List<DeviceSCADAInputInfo>> map = new HashMap<>();
             List<DeviceSCADAInputInfo> list;
@@ -1008,8 +1008,10 @@ public class AlarmService {
                             if (cell.getCellType() == CellType.FORMULA) {
                                 CellValue cellValue = formulaEvaluator.evaluate(cell);
                                 deviceSCADAInputInfo.setPointCode(String.format("%.0f", cellValue.getNumberValue()));
-                            } else {
+                            } else if (cell.getCellType() == CellType.STRING) {
                                 deviceSCADAInputInfo.setPointCode(cell.getStringCellValue());
+                            } else if (cell.getCellType() == CellType.NUMERIC) {
+                                deviceSCADAInputInfo.setPointCode(cell.getNumericCellValue() + "");
                             }
                         }
                     }
